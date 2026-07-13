@@ -1,8 +1,8 @@
 {
   "schema": "helios.launch_countdown/v1",
   "fleet_name": "HELIOS Platform Launch",
-  "updated_at": "2026-07-13T14:45:00-04:00",
-  "notes": "Launch targets are editable. Build counts were derived from each repo's sprint books / roadmaps as of updated_at. Edit this file and refresh the page \u2014 no rebuild required.",
+  "updated_at": "2026-07-13T15:12:00-04:00",
+  "notes": "Launch targets are editable. Build counts were derived from each repo's sprint books / roadmaps as of updated_at. Edit this file and refresh the page — no rebuild required.",
   "platforms": [
     {
       "id": "elite-vantage-greenfield",
@@ -14,10 +14,10 @@
       "launch_at": "2026-10-15T09:00:00-04:00",
       "status": "in_progress",
       "unit_label": "sprints",
-      "builds_completed": 9,
+      "builds_completed": 17,
       "builds_total": 40,
-      "current_build": "S09 \u2014 Object storage / file service (unlocked)",
-      "summary": "Greenfield rebuild governed by the Engineering Bible. S00\u2013S08 accepted PASS. S09 unlocked.",
+      "current_build": "Parallel build — Claude on S21; Cursor closing S10–S13 spine",
+      "summary": "Codex/Claude/Cursor parallel greenfield. Main PASS S00–S08. Codex finished S09 + S14–S20 implementation (dirty worktree, suite green). Claude opened S21 after laying an S10 jobs/outbox seam. Formal ACCEPTANCE still PASS only through S08; S10–S13 remain the accept-chain gap.",
       "production_url": "https://elite.helios-fintech.com",
       "tags": [
         "fastapi",
@@ -70,34 +70,95 @@
           "id": "S08",
           "title": "RBAC / ABAC / entitlements / elevation",
           "status": "PASS"
+        },
+        {
+          "id": "S09",
+          "title": "Object storage / file service (Codex branch; gate proof PASS, accept PENDING)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S14",
+          "title": "Public ingestion / coverage (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S15",
+          "title": "Licensed provider adapters (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S16",
+          "title": "Property intelligence graph (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S17",
+          "title": "Geography / territories / map (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S18",
+          "title": "Legal / condition signals (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S19",
+          "title": "Financial / valuation snapshots (Codex)",
+          "status": "IMPL_DONE"
+        },
+        {
+          "id": "S20",
+          "title": "Neighborhood intelligence (Codex done)",
+          "status": "IMPL_DONE"
         }
       ],
       "outstanding_builds": [
         {
-          "id": "S09",
-          "title": "Object storage, file service, malware/media pipeline",
+          "id": "S10–S13",
+          "title": "Critical spine gap — jobs/outbox, telemetry, provider orchestrator, property identity (blocks S14–S20 formal PASS)",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "id": "S21",
+          "title": "Market intelligence — Claude active (S10 seam started under S21 worktree)",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "id": "S22–S26",
+          "title": "Opportunity scoring / CRM / comms / campaigns / listing center",
           "status": "PENDING"
         },
         {
-          "id": "S10\u2013S39",
-          "title": "Remaining greenfield build books through launch polish",
+          "id": "S27–S32",
+          "title": "Seller/buyer/tours/deals/marketing/AI",
+          "status": "PENDING"
+        },
+        {
+          "id": "S33–S39",
+          "title": "Integrations through pilot / launch certification",
           "status": "PENDING"
         }
       ],
       "blockers": [
+        "S14–S20 formal acceptance blocked until S10–S13 accepted (and ATTOM/RESO license+credential evidence)",
+        "Codex S14–S20 still dirty/uncommitted on codex/S14toS20 — not merge-bound certification yet",
         "Legacy DEPLOY_HOLD / credential rotation tracked on production Elite track"
       ],
       "detail_sections": [
         {
-          "title": "Progress model",
-          "body": "40 build-books under build-books/S00\u2013S39. Completed = ACCEPTANCE_CRITERIA.yaml status PASS."
+          "title": "Agent lanes (scanned 2026-07-13)",
+          "body": "Codex worktree D:/Elite-Vantage/elite-vantage on codex/S14toS20: S09 committed + certified; S14–S20 implemented with docs/evidence/S14–S20 validation green. Claude worktree D:/Elite-Vantage/ev-claude-s21to39 on claude/S21toS39: opening S21 and scaffolding S10 durable-jobs/outbox seam. Cursor: orchestration + critical-path S10–S13 closeout so Codex slices can certify."
         },
         {
-          "title": "Latest evidence",
-          "body": "docs/evidence/S00\u2013S08 present. Recent main commits harden S08 fail-closed ABAC, entitlements backfill, and MFA elevation."
+          "title": "Progress model",
+          "body": "40 build-books (S00–S39). Countdown count = formal main PASS (S00–S08) + worktree implementation-complete (S09, S14–S20) = 17/40. Not counted until clean candidate + independent PASS: remaining accept work on those slices and all of S10–S13, S21–S39."
+        },
+        {
+          "title": "Remaining estimate",
+          "body": "23 sprints left on the board (S10–S13 spine + S21–S39). Parallel lanes cut wall-clock vs sequential, but S10–S13 still serialize formal unlock of Codex intelligence stack."
         }
       ],
-      "updated_note": "S08 accepted 2026-07-13 after Codex PASS"
+      "updated_note": "2026-07-13 worktree scan: Codex through S20 impl; Claude on S21; formal PASS still S00–S08 only"
     },
     {
       "id": "constructionos",
@@ -111,8 +172,8 @@
       "unit_label": "sprints",
       "builds_completed": 13,
       "builds_total": 38,
-      "current_build": "S12 \u2014 AI agent foundation (merged); next S13+",
-      "summary": "AI-native multi-tenant construction enterprise OS. Engineering Bible sprint program S00\u2192S37. Main is through S12 AI agent foundation.",
+      "current_build": "S12 — AI agent foundation (merged); next S13+",
+      "summary": "AI-native multi-tenant construction enterprise OS. Engineering Bible sprint program S00→S37. Main is through S12 AI agent foundation.",
       "production_url": "",
       "tags": [
         "nestjs",
@@ -194,22 +255,22 @@
           "status": "planned"
         },
         {
-          "id": "S14\u2013S20",
-          "title": "Domain agents (finance \u2192 M&A)",
+          "id": "S14–S20",
+          "title": "Domain agents (finance → M&A)",
           "status": "planned"
         },
         {
-          "id": "S21\u2013S26",
+          "id": "S21–S26",
           "title": "Command centers + documents",
           "status": "planned"
         },
         {
-          "id": "S27\u2013S32",
+          "id": "S27–S32",
           "title": "Integrations / simulation / search / seed",
           "status": "planned"
         },
         {
-          "id": "S33\u2013S37",
+          "id": "S33–S37",
           "title": "Testing, security, infra, observability, launch polish",
           "status": "planned"
         }
@@ -218,7 +279,7 @@
       "detail_sections": [
         {
           "title": "Progress model",
-          "body": "38 sprints (S00\u2013S37) from docs/engineering-bible/sprint_build_books. Completed count from merged sprint work on main through S12."
+          "body": "38 sprints (S00–S37) from docs/engineering-bible/sprint_build_books. Completed count from merged sprint work on main through S12."
         },
         {
           "title": "Launch sprint",
@@ -238,7 +299,7 @@
       "unit_label": "modules",
       "builds_completed": 3,
       "builds_total": 16,
-      "current_build": "Phase 1 foundation \u2014 monorepo + core workspaces",
+      "current_build": "Phase 1 foundation — monorepo + core workspaces",
       "summary": "Helios PropertyOS for property management & lease intelligence. Monorepo (web + api) scaffolded with core workspace pages; deeper lease-intelligence productization still ahead.",
       "production_url": "",
       "tags": [
@@ -265,23 +326,23 @@
       ],
       "outstanding_builds": [
         {
-          "id": "B04\u2013B07",
-          "title": "Phase 1 \u2014 foundation hardening (auth, tenancy, data model)",
+          "id": "B04–B07",
+          "title": "Phase 1 — foundation hardening (auth, tenancy, data model)",
           "status": "planned"
         },
         {
-          "id": "B08\u2013B11",
-          "title": "Phase 2 \u2014 operations (rent, maintenance, tenants, documents live)",
+          "id": "B08–B11",
+          "title": "Phase 2 — operations (rent, maintenance, tenants, documents live)",
           "status": "planned"
         },
         {
-          "id": "B12\u2013B14",
-          "title": "Phase 3 \u2014 brokerage moat / lease intelligence",
+          "id": "B12–B14",
+          "title": "Phase 3 — brokerage moat / lease intelligence",
           "status": "planned"
         },
         {
-          "id": "B15\u2013B16",
-          "title": "Phase 4 \u2014 productization / launch",
+          "id": "B15–B16",
+          "title": "Phase 4 — productization / launch",
           "status": "planned"
         }
       ],
@@ -295,7 +356,7 @@
         },
         {
           "title": "Progress model",
-          "body": "16 planned build units across the 4-phase lease-intelligence roadmap (foundation \u2192 operations \u2192 brokerage moat \u2192 productization)."
+          "body": "16 planned build units across the 4-phase lease-intelligence roadmap (foundation → operations → brokerage moat → productization)."
         }
       ]
     },
@@ -311,8 +372,8 @@
       "unit_label": "phases",
       "builds_completed": 1,
       "builds_total": 6,
-      "current_build": "Phase 1 \u2014 clean shell (corporateos-v2)",
-      "summary": "CorporateOS 2.0 clean-shell rebuild. Six gated phases (0\u2192GA). corporateos-v2 shell exists with core platform modules (audit, platforms, system, vendors).",
+      "current_build": "Phase 1 — clean shell (corporateos-v2)",
+      "summary": "CorporateOS 2.0 clean-shell rebuild. Six gated phases (0→GA). corporateos-v2 shell exists with core platform modules (audit, platforms, system, vendors).",
       "production_url": "",
       "tags": [
         "rebuild",
@@ -322,34 +383,34 @@
       "completed_builds": [
         {
           "id": "P0",
-          "title": "Phase 0 \u2014 decisions & foundation (v2 repo/shell stood up)",
+          "title": "Phase 0 — decisions & foundation (v2 repo/shell stood up)",
           "status": "done"
         }
       ],
       "outstanding_builds": [
         {
           "id": "P1",
-          "title": "Phase 1 \u2014 the shell (auth, tenancy, events, audit)",
+          "title": "Phase 1 — the shell (auth, tenancy, events, audit)",
           "status": "in_progress"
         },
         {
           "id": "P2",
-          "title": "Phase 2 \u2014 daily-driver trio (Command Center + Money + Revenue)",
+          "title": "Phase 2 — daily-driver trio (Command Center + Money + Revenue)",
           "status": "planned"
         },
         {
           "id": "P3",
-          "title": "Phase 3 \u2014 remaining modules + integrations hub",
+          "title": "Phase 3 — remaining modules + integrations hub",
           "status": "planned"
         },
         {
           "id": "P4",
-          "title": "Phase 4 \u2014 full organization + AI partner governance",
+          "title": "Phase 4 — full organization + AI partner governance",
           "status": "planned"
         },
         {
           "id": "P5",
-          "title": "Phase 5 \u2014 commercial GA / self-onboard",
+          "title": "Phase 5 — commercial GA / self-onboard",
           "status": "planned"
         }
       ],
@@ -369,7 +430,7 @@
     },
     {
       "id": "capital-markets-os-cre",
-      "name": "Capital Markets OS \u2014 CRE",
+      "name": "Capital Markets OS — CRE",
       "short_name": "Capital Markets OS",
       "repo": "EdweirdB/CapitalMarketOS",
       "repo_url": "https://github.com/EdweirdB/CapitalMarketOS",
@@ -379,7 +440,7 @@
       "unit_label": "roadmap items",
       "builds_completed": 9,
       "builds_total": 46,
-      "current_build": "Phase 1 \u2014 production readiness (secrets/identity largely done)",
+      "current_build": "Phase 1 — production readiness (secrets/identity largely done)",
       "summary": "CRE capital markets platform on Azure Container Apps + SWA. Backend/auth/demo partition wired; production roadmap still has substantial open checklist items.",
       "production_url": "",
       "tags": [
@@ -443,7 +504,7 @@
         },
         {
           "title": "Current state",
-          "body": "25+ v1 routes; Entra + JWT + TOTP + WebAuthn; demo partition; GHA \u2192 Bicep \u2192 ACR \u2192 Container Apps + SWA."
+          "body": "25+ v1 routes; Entra + JWT + TOTP + WebAuthn; demo partition; GHA → Bicep → ACR → Container Apps + SWA."
         }
       ]
     },
@@ -475,7 +536,7 @@
         },
         {
           "id": "L02",
-          "title": "Frontend \u2194 dedicated Functions API architecture",
+          "title": "Frontend ↔ dedicated Functions API architecture",
           "status": "done"
         },
         {
@@ -491,22 +552,22 @@
       ],
       "outstanding_builds": [
         {
-          "id": "L05\u2013L10",
+          "id": "L05–L10",
           "title": "Security checklist (JWT, encryption, CORS, secrets, validation, rate limits)",
           "status": "open"
         },
         {
-          "id": "L11\u2013L13",
+          "id": "L11–L13",
           "title": "Claude AI integration plan",
           "status": "open"
         },
         {
-          "id": "L14\u2013L15",
+          "id": "L14–L15",
           "title": "Bloomberg-style markets page",
           "status": "open"
         },
         {
-          "id": "L16\u2013L18",
+          "id": "L16–L18",
           "title": "Button/function audit + investment growth features",
           "status": "open"
         }

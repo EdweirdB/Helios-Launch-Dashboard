@@ -6,7 +6,7 @@ Realtime kiosk dashboard for Helios platform launch countdowns — built to stay
 
 | Platform | Build unit | Progress seed |
 |---|---|---|
-| Elite Vantage Greenfield | sprints S00–S39 | 8 / 40 PASS |
+| Elite Vantage Greenfield | sprints S00–S39 | 17 / 40 (9 PASS + 8 impl) |
 | Construction OS | sprints S00–S37 | 13 / 38 |
 | Property OS | modules / phases | 3 / 16 |
 | Corporate OS | phases 0–5 | 1 / 6 |
