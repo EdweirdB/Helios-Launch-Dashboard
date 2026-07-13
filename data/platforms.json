@@ -1,0 +1,267 @@
+{
+  "schema": "helios.launch_countdown/v1",
+  "fleet_name": "HELIOS Platform Launch",
+  "updated_at": "2026-07-13T14:00:00-04:00",
+  "notes": "Launch targets are editable. Build counts were derived from each repo's sprint books / roadmaps as of updated_at. Edit this file and refresh the page — no rebuild required.",
+  "platforms": [
+    {
+      "id": "elite-vantage-greenfield",
+      "name": "Elite Vantage Greenfield",
+      "short_name": "Elite Vantage",
+      "repo": "EdweirdB/elite-vantage-greenfield",
+      "repo_url": "https://github.com/EdweirdB/elite-vantage-greenfield",
+      "local_path": "D:/Elite-Vantage/elite-vantage",
+      "launch_at": "2026-10-15T09:00:00-04:00",
+      "status": "in_progress",
+      "unit_label": "sprints",
+      "builds_completed": 8,
+      "builds_total": 40,
+      "current_build": "S08 — RBAC / ABAC / entitlements (PENDING acceptance)",
+      "summary": "Greenfield rebuild governed by the Engineering Bible. S00–S07 accepted PASS. S08 implementation merged; acceptance still PENDING. Track S00–S39.",
+      "production_url": "https://elite.helios-fintech.com",
+      "tags": ["fastapi", "nextjs", "azure", "greenfield"],
+      "completed_builds": [
+        { "id": "S00", "title": "Authority freeze / repo foundation", "status": "PASS" },
+        { "id": "S01", "title": "Platform foundation", "status": "PASS" },
+        { "id": "S02", "title": "Azure greenfield delivery", "status": "PASS" },
+        { "id": "S03", "title": "Core platform services", "status": "PASS" },
+        { "id": "S04", "title": "API contracts / ops status", "status": "PASS" },
+        { "id": "S05", "title": "Database migrations", "status": "PASS" },
+        { "id": "S06", "title": "Brokerage tenancy", "status": "PASS" },
+        { "id": "S07", "title": "Identity / sessions / OIDC", "status": "PASS" }
+      ],
+      "outstanding_builds": [
+        { "id": "S08", "title": "RBAC / ABAC / entitlements / elevation", "status": "PENDING" },
+        { "id": "S09–S39", "title": "Remaining greenfield build books through launch polish", "status": "PENDING" }
+      ],
+      "blockers": [
+        "S08 acceptance still PENDING despite merged implementation",
+        "Legacy DEPLOY_HOLD / credential rotation tracked on production Elite track"
+      ],
+      "detail_sections": [
+        {
+          "title": "Progress model",
+          "body": "40 build-books under build-books/S00–S39. Completed = ACCEPTANCE_CRITERIA.yaml status PASS."
+        },
+        {
+          "title": "Latest evidence",
+          "body": "docs/evidence/S00–S08 present. Recent main commits harden S08 fail-closed ABAC, entitlements backfill, and MFA elevation."
+        }
+      ]
+    },
+    {
+      "id": "constructionos",
+      "name": "Construction OS",
+      "short_name": "Construction OS",
+      "repo": "EdweirdB/ConstructionOS",
+      "repo_url": "https://github.com/EdweirdB/ConstructionOS",
+      "local_path": "D:/ConstructionOS",
+      "launch_at": "2026-11-15T09:00:00-04:00",
+      "status": "in_progress",
+      "unit_label": "sprints",
+      "builds_completed": 13,
+      "builds_total": 38,
+      "current_build": "S12 — AI agent foundation (merged); next S13+",
+      "summary": "AI-native multi-tenant construction enterprise OS. Engineering Bible sprint program S00→S37. Main is through S12 AI agent foundation.",
+      "production_url": "",
+      "tags": ["nestjs", "vite", "prisma", "turborepo"],
+      "completed_builds": [
+        { "id": "S00", "title": "Repo foundation", "status": "done" },
+        { "id": "S01", "title": "Design system + app shell", "status": "done" },
+        { "id": "S02", "title": "Auth / RBAC / tenancy", "status": "done" },
+        { "id": "S03", "title": "Audit / notifications / settings", "status": "done" },
+        { "id": "S04", "title": "Command center", "status": "done" },
+        { "id": "S05", "title": "Realtime maps", "status": "done" },
+        { "id": "S06", "title": "Projects core", "status": "done" },
+        { "id": "S07", "title": "Project financials", "status": "done" },
+        { "id": "S08", "title": "Project schedules", "status": "done" },
+        { "id": "S09", "title": "Project controls", "status": "done" },
+        { "id": "S10", "title": "Digital twin core", "status": "done" },
+        { "id": "S11", "title": "Site telemetry", "status": "done" },
+        { "id": "S12", "title": "AI agent foundation", "status": "done" }
+      ],
+      "outstanding_builds": [
+        { "id": "S13", "title": "Executive advisor agent", "status": "planned" },
+        { "id": "S14–S20", "title": "Domain agents (finance → M&A)", "status": "planned" },
+        { "id": "S21–S26", "title": "Command centers + documents", "status": "planned" },
+        { "id": "S27–S32", "title": "Integrations / simulation / search / seed", "status": "planned" },
+        { "id": "S33–S37", "title": "Testing, security, infra, observability, launch polish", "status": "planned" }
+      ],
+      "blockers": [],
+      "detail_sections": [
+        {
+          "title": "Progress model",
+          "body": "38 sprints (S00–S37) from docs/engineering-bible/sprint_build_books. Completed count from merged sprint work on main through S12."
+        },
+        {
+          "title": "Launch sprint",
+          "body": "S37_LAUNCH_POLISH is the terminal sprint in the build program."
+        }
+      ]
+    },
+    {
+      "id": "propertyos",
+      "name": "Property OS",
+      "short_name": "Property OS",
+      "repo": "",
+      "repo_url": "",
+      "local_path": "D:/PropertyOS",
+      "launch_at": "2026-12-15T09:00:00-04:00",
+      "status": "foundation",
+      "unit_label": "modules",
+      "builds_completed": 3,
+      "builds_total": 16,
+      "current_build": "Phase 1 foundation — monorepo + core workspaces",
+      "summary": "Helios PropertyOS for property management & lease intelligence. Monorepo (web + api) scaffolded with core workspace pages; deeper lease-intelligence productization still ahead.",
+      "production_url": "",
+      "tags": ["property", "lease-intelligence", "monorepo"],
+      "completed_builds": [
+        { "id": "B01", "title": "Monorepo scaffold (web + api)", "status": "done" },
+        { "id": "B02", "title": "Rebuild on helios_propertyos.html foundation", "status": "done" },
+        { "id": "B03", "title": "Enterprise architecture / AI agents / admin settings shell", "status": "done" }
+      ],
+      "outstanding_builds": [
+        { "id": "B04–B07", "title": "Phase 1 — foundation hardening (auth, tenancy, data model)", "status": "planned" },
+        { "id": "B08–B11", "title": "Phase 2 — operations (rent, maintenance, tenants, documents live)", "status": "planned" },
+        { "id": "B12–B14", "title": "Phase 3 — brokerage moat / lease intelligence", "status": "planned" },
+        { "id": "B15–B16", "title": "Phase 4 — productization / launch", "status": "planned" }
+      ],
+      "blockers": [
+        "No public GitHub remote configured yet"
+      ],
+      "detail_sections": [
+        {
+          "title": "Workspace surfaces already present",
+          "body": "Dashboard, Portfolio, Leases, Tenants, Owners, Rent, Maintenance, Marketing, Documents, Reports, AI Concierge, Settings."
+        },
+        {
+          "title": "Progress model",
+          "body": "16 planned build units across the 4-phase lease-intelligence roadmap (foundation → operations → brokerage moat → productization)."
+        }
+      ]
+    },
+    {
+      "id": "corporateos",
+      "name": "Corporate OS",
+      "short_name": "Corporate OS",
+      "repo": "EdweirdB/CorporateOS",
+      "repo_url": "https://github.com/EdweirdB/CorporateOS",
+      "local_path": "D:/CorporateOS",
+      "launch_at": "2027-01-15T09:00:00-05:00",
+      "status": "rebuild",
+      "unit_label": "phases",
+      "builds_completed": 1,
+      "builds_total": 6,
+      "current_build": "Phase 1 — clean shell (corporateos-v2)",
+      "summary": "CorporateOS 2.0 clean-shell rebuild. Six gated phases (0→GA). corporateos-v2 shell exists with core platform modules (audit, platforms, system, vendors).",
+      "production_url": "",
+      "tags": ["rebuild", "fastapi", "typescript"],
+      "completed_builds": [
+        { "id": "P0", "title": "Phase 0 — decisions & foundation (v2 repo/shell stood up)", "status": "done" }
+      ],
+      "outstanding_builds": [
+        { "id": "P1", "title": "Phase 1 — the shell (auth, tenancy, events, audit)", "status": "in_progress" },
+        { "id": "P2", "title": "Phase 2 — daily-driver trio (Command Center + Money + Revenue)", "status": "planned" },
+        { "id": "P3", "title": "Phase 3 — remaining modules + integrations hub", "status": "planned" },
+        { "id": "P4", "title": "Phase 4 — full organization + AI partner governance", "status": "planned" },
+        { "id": "P5", "title": "Phase 5 — commercial GA / self-onboard", "status": "planned" }
+      ],
+      "blockers": [
+        "Phase 0 identity / repo / event-bus decisions must stay signed off before advancing gates"
+      ],
+      "detail_sections": [
+        {
+          "title": "Progress model",
+          "body": "Six phases from rebuild-blueprint/03_CORPORATEOS_ROADMAP.md. Each phase ends on a hard go/no-go gate."
+        },
+        {
+          "title": "v2 modules present",
+          "body": "backend app modules: audit, platforms, system, vendors."
+        }
+      ]
+    },
+    {
+      "id": "capital-markets-os-cre",
+      "name": "Capital Markets OS — CRE",
+      "short_name": "Capital Markets OS",
+      "repo": "EdweirdB/CapitalMarketOS",
+      "repo_url": "https://github.com/EdweirdB/CapitalMarketOS",
+      "local_path": "D:/CapitalMarketOS",
+      "launch_at": "2026-09-30T09:00:00-04:00",
+      "status": "hardening",
+      "unit_label": "roadmap items",
+      "builds_completed": 9,
+      "builds_total": 46,
+      "current_build": "Phase 1 — production readiness (secrets/identity largely done)",
+      "summary": "CRE capital markets platform on Azure Container Apps + SWA. Backend/auth/demo partition wired; production roadmap still has substantial open checklist items.",
+      "production_url": "",
+      "tags": ["cre", "fastapi", "entra", "azure"],
+      "completed_builds": [
+        { "id": "R01", "title": "Secrets & identity wiring (APP_SECRET_KEY, WebAuthn, prod guards)", "status": "done" },
+        { "id": "R02", "title": "Alembic 007 webauthn + data_partition", "status": "done" },
+        { "id": "R03", "title": "Deploy secret validation in CI", "status": "done" },
+        { "id": "R04+", "title": "Additional Phase-1 checklist completions", "status": "done" }
+      ],
+      "outstanding_builds": [
+        { "id": "P1", "title": "Finish production readiness (Redis, Alembic gate, observability, smoke)", "status": "open" },
+        { "id": "P2", "title": "Canonical deal model + wire remaining modules to API", "status": "open" },
+        { "id": "P3", "title": "Documents, async jobs, market data", "status": "open" },
+        { "id": "P4+", "title": "Remaining PRODUCTION_ROADMAP checklist items", "status": "open" }
+      ],
+      "blockers": [
+        "Set APP_SECRET_KEY in GitHub before next main deploy",
+        "Provision Azure Cache for Redis in rg-capitalmarketos-prod"
+      ],
+      "detail_sections": [
+        {
+          "title": "Progress model",
+          "body": "Checklist items in docs/PRODUCTION_ROADMAP.md (9 checked / 46 total as of last scan)."
+        },
+        {
+          "title": "Current state",
+          "body": "25+ v1 routes; Entra + JWT + TOTP + WebAuthn; demo partition; GHA → Bicep → ACR → Container Apps + SWA."
+        }
+      ]
+    },
+    {
+      "id": "plutus",
+      "name": "Plutus",
+      "short_name": "Plutus",
+      "repo": "EdweirdB/Plutus",
+      "repo_url": "https://github.com/EdweirdB/Plutus",
+      "local_path": "D:/Plutus-1",
+      "launch_at": "2026-08-31T09:00:00-04:00",
+      "status": "live_hardening",
+      "unit_label": "launch items",
+      "builds_completed": 4,
+      "builds_total": 18,
+      "current_build": "Security + markets + Claude AI hardening",
+      "summary": "Personal / family capital OS (SWA + Azure Functions). Core shell and many API routes are live; security checklist, markets Bloomberg view, and Claude AI features remain open toward launch polish.",
+      "production_url": "https://plutus.helios-fintech.com",
+      "tags": ["plaid", "azure-functions", "vite"],
+      "completed_builds": [
+        { "id": "L01", "title": "Credentials save + backend status path fixed", "status": "done" },
+        { "id": "L02", "title": "Frontend ↔ dedicated Functions API architecture", "status": "done" },
+        { "id": "L03", "title": "Core wired API surface (accounts / txns / investments)", "status": "done" },
+        { "id": "L04", "title": "Plaid item fault isolation (investments/liabilities/cash-flow)", "status": "done" }
+      ],
+      "outstanding_builds": [
+        { "id": "L05–L10", "title": "Security checklist (JWT, encryption, CORS, secrets, validation, rate limits)", "status": "open" },
+        { "id": "L11–L13", "title": "Claude AI integration plan", "status": "open" },
+        { "id": "L14–L15", "title": "Bloomberg-style markets page", "status": "open" },
+        { "id": "L16–L18", "title": "Button/function audit + investment growth features", "status": "open" }
+      ],
+      "blockers": [],
+      "detail_sections": [
+        {
+          "title": "Progress model",
+          "body": "Launch items synthesized from docs/PLATFORM_ANALYSIS_AND_ROADMAP.md sections (security, AI, markets, audits, growth features)."
+        },
+        {
+          "title": "Deploy",
+          "body": "Frontend: Azure Static Web Apps. Backend: dedicated Azure Functions App (func-plutus-api-prod)."
+        }
+      ]
+    }
+  ]
+}
