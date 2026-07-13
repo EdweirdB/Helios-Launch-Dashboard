@@ -1,8 +1,8 @@
 {
   "schema": "helios.launch_countdown/v1",
   "fleet_name": "HELIOS Platform Launch",
-  "updated_at": "2026-07-13T15:12:00-04:00",
-  "notes": "Launch targets are editable. Build counts were derived from each repo's sprint books / roadmaps as of updated_at. Edit this file and refresh the page — no rebuild required.",
+  "updated_at": "2026-07-13T15:20:00-04:00",
+  "notes": "Launch targets are editable. Elite date assumes three-lane parallel build (Cursor S09-S13 / Codex S14-S20 / Claude S21-S39), not sequential S00-S39. Edit this file and refresh the page — no rebuild required.",
   "platforms": [
     {
       "id": "elite-vantage-greenfield",
@@ -11,13 +11,13 @@
       "repo": "EdweirdB/elite-vantage-greenfield",
       "repo_url": "https://github.com/EdweirdB/elite-vantage-greenfield",
       "local_path": "D:/Elite-Vantage/elite-vantage",
-      "launch_at": "2026-10-15T09:00:00-04:00",
+      "launch_at": "2026-08-08T09:00:00-04:00",
       "status": "in_progress",
       "unit_label": "sprints",
       "builds_completed": 17,
       "builds_total": 40,
-      "current_build": "Parallel build — Claude on S21; Cursor closing S10–S13 spine",
-      "summary": "Codex/Claude/Cursor parallel greenfield. Main PASS S00–S08. Codex finished S09 + S14–S20 implementation (dirty worktree, suite green). Claude opened S21 after laying an S10 jobs/outbox seam. Formal ACCEPTANCE still PASS only through S08; S10–S13 remain the accept-chain gap.",
+      "current_build": "Codex auditing S14–S20 (session complete-claim); Cursor S09–S13; Claude S21–S39",
+      "summary": "Three-lane parallel greenfield per Codex session 019f5c7b-6a3a-7601-a9cd-3745eed4a0c1: Cursor=S09–S13, Codex=S14–S20, Claude=S21–S39. Codex alleges full S14–S20 implementation complete and is in adversarial audit/hardening now (backend+browser gap fixes still landing). Main formal PASS remains S00–S08; S09 committed on codex/S14toS20. Launch clock uses longest remaining lane (Claude S21–S39 ≈19) + integrate/certify — not 23 sequential leftover sprints.",
       "production_url": "https://elite.helios-fintech.com",
       "tags": [
         "fastapi",
@@ -73,92 +73,83 @@
         },
         {
           "id": "S09",
-          "title": "Object storage / file service (Codex branch; gate proof PASS, accept PENDING)",
+          "title": "Object storage / files (on Codex branch; Cursor lane owns S09–S13)",
           "status": "IMPL_DONE"
         },
         {
           "id": "S14",
-          "title": "Public ingestion / coverage (Codex)",
+          "title": "Public ingestion / coverage — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S15",
-          "title": "Licensed provider adapters (Codex)",
+          "title": "Licensed provider adapters — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S16",
-          "title": "Property intelligence graph (Codex)",
+          "title": "Property intelligence graph — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S17",
-          "title": "Geography / territories / map (Codex)",
+          "title": "Geography / territories / map — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S18",
-          "title": "Legal / condition signals (Codex)",
+          "title": "Legal / condition signals — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S19",
-          "title": "Financial / valuation snapshots (Codex)",
+          "title": "Financial / valuation snapshots — Codex lane",
           "status": "IMPL_DONE"
         },
         {
           "id": "S20",
-          "title": "Neighborhood intelligence (Codex done)",
-          "status": "IMPL_DONE"
+          "title": "Neighborhood intelligence — Codex claim COMPLETE, audit in progress",
+          "status": "AUDIT"
         }
       ],
       "outstanding_builds": [
         {
           "id": "S10–S13",
-          "title": "Critical spine gap — jobs/outbox, telemetry, provider orchestrator, property identity (blocks S14–S20 formal PASS)",
+          "title": "Cursor lane — jobs/outbox, telemetry, provider orchestrator, property identity",
           "status": "IN_PROGRESS"
         },
         {
-          "id": "S21",
-          "title": "Market intelligence — Claude active (S10 seam started under S21 worktree)",
+          "id": "S14–S20",
+          "title": "Codex audit/hardening then clean-candidate accept (impl claimed done)",
+          "status": "AUDIT"
+        },
+        {
+          "id": "S21–S39",
+          "title": "Claude lane — market intel through pilot/launch certification (critical path)",
           "status": "IN_PROGRESS"
-        },
-        {
-          "id": "S22–S26",
-          "title": "Opportunity scoring / CRM / comms / campaigns / listing center",
-          "status": "PENDING"
-        },
-        {
-          "id": "S27–S32",
-          "title": "Seller/buyer/tours/deals/marketing/AI",
-          "status": "PENDING"
-        },
-        {
-          "id": "S33–S39",
-          "title": "Integrations through pilot / launch certification",
-          "status": "PENDING"
         }
       ],
       "blockers": [
-        "S14–S20 formal acceptance blocked until S10–S13 accepted (and ATTOM/RESO license+credential evidence)",
-        "Codex S14–S20 still dirty/uncommitted on codex/S14toS20 — not merge-bound certification yet",
-        "Legacy DEPLOY_HOLD / credential rotation tracked on production Elite track"
+        "Codex S14–S20 not yet clean-candidate accepted; adversarial audit still open in session 019f5c7b-6a3a-7601-a9cd-3745eed4a0c1",
+        "Formal PASS of S14–S20 still depends on Cursor finishing/accepting S10–S13 + ATTOM/RESO authority",
+        "Claude S21–S39 is the wall-clock critical path under parallel lanes",
+        "Legacy DEPLOY_HOLD / credential rotation on production Elite track"
       ],
       "detail_sections": [
         {
-          "title": "Agent lanes (scanned 2026-07-13)",
-          "body": "Codex worktree D:/Elite-Vantage/elite-vantage on codex/S14toS20: S09 committed + certified; S14–S20 implemented with docs/evidence/S14–S20 validation green. Claude worktree D:/Elite-Vantage/ev-claude-s21to39 on claude/S21toS39: opening S21 and scaffolding S10 durable-jobs/outbox seam. Cursor: orchestration + critical-path S10–S13 closeout so Codex slices can certify."
+          "title": "Parallel lane model (Codex session 019f5c7b…)",
+          "body": "User mandate captured 2026-07-13 13:17 EDT: Codex builds S14–S20 to full completion while Cursor builds S09–S13 and Claude handles S21–S39. Codex worktree D:/Elite-Vantage/elite-vantage on codex/S14toS20; Claude worktree D:/Elite-Vantage/ev-claude-s21to39 on claude/S21toS39. As of ~15:14 EDT Codex messages report S14–S20 core impl + PostGIS/RLS/frontend green, then browser and security adversarial audit fixing remaining gaps — treat as IMPLEMENTATION CLAIMED / AUDIT OPEN, not formal PASS."
+        },
+        {
+          "title": "Launch clock math",
+          "body": "Old Oct 15 assumed mostly-sequential ~32 leftover sprints. With three concurrent lanes, wall-clock ≈ max(Cursor residual S10–S13, Codex audit/merge, Claude S21–S39) + integrate/pilot. Claude’s 19 is the long pole. Codex cleared a 7-sprint band in ~one session day; applying aggressive parallel pace to Claude + ~1 week integrate/S38–S39 pilot buffer → target 2026-08-08 (~3.5 weeks from scan), ~68 days earlier than Oct 15."
         },
         {
           "title": "Progress model",
-          "body": "40 build-books (S00–S39). Countdown count = formal main PASS (S00–S08) + worktree implementation-complete (S09, S14–S20) = 17/40. Not counted until clean candidate + independent PASS: remaining accept work on those slices and all of S10–S13, S21–S39."
-        },
-        {
-          "title": "Remaining estimate",
-          "body": "23 sprints left on the board (S10–S13 spine + S21–S39). Parallel lanes cut wall-clock vs sequential, but S10–S13 still serialize formal unlock of Codex intelligence stack."
+          "body": "40 build-books. Countdown completed=17 = main PASS S00–S08 (9) + S09 + Codex S14–S20 impl claim (7). Formal ACCEPTANCE_CRITERIA PASS remains S00–S08 only until Cursor spine + Codex audit + clean merge."
         }
       ],
-      "updated_note": "2026-07-13 worktree scan: Codex through S20 impl; Claude on S21; formal PASS still S00–S08 only"
+      "updated_note": "2026-07-13: launch pulled to 2026-08-08 on three-lane parallel model; Codex S14–S20 auditing"
     },
     {
       "id": "constructionos",
